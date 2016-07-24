@@ -60,7 +60,7 @@
 //ajax 提交数据
 <script type="text/javascript">
         function Delete(event){
-                var value = event.value
+                var value = event.value //表单value的值
                   if (!confirm("确认要删除该主机吗?")) {
                         window.event.returnValue = false;
                  }
