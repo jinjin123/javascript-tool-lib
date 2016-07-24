@@ -1,1 +1,1 @@
-# javascript-tool-lib
+常用的javascript
