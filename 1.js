@@ -117,4 +117,5 @@
     
     <button style="float:right" class="btn btn-info btn-srm " type="button" onclick="check();"  >点击上传</button>
     http://stackoverflow.com/questions/27736186/jquery-has-deprecated-synchronous-xmlhttprequest
+    http://blog.csdn.net/willspace/article/details/49021481
    ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
