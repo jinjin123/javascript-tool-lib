@@ -86,8 +86,34 @@
 <li><button id="del" type="submit" value="{{b[u'host_id']}}" onclick="Delete(this)"><i class="icon-trash"></i>删除</button></li>
 
 
-
-
-
-
 ------------------------------------------------------------------------------------------------------------------------
+  //ajax  一个按钮，两个事件的功能，传文件
+    <script type="text/javascript">
+            function check() {
+                var file_value = document.getElementById("file").value;
+                var formData = new FormData($( "#fileup" )[0]);
+                if(file_value == ""){
+                        alert('请选择文件!')
+                        return false;
+                }else{
+                        $.ajax({
+                        url: '/file_up' , 
+                        type: 'POST', 
+                        data: formData, 
+                        async: true, 
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        success: function (returndata) { 
+                                alert("上传成功,正在传输到远端服务器");
+                        }, 
+                        error: function (returndata) { 
+                                alert(returndata); 
+                        } 
+                 }); 
+                } 
+         }
+    </script>
+    
+    <button style="float:right" class="btn btn-info btn-srm " type="button" onclick="check();"  >点击上传</button>
+   ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
