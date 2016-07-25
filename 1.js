@@ -1,4 +1,4 @@
-//验证整个表单的输入值
+//验证整个表单的输入值外加IP正则
 <script type="text/javascript">
         function checkip(ipaddr)
         {
@@ -87,7 +87,7 @@
 
 
 ------------------------------------------------------------------------------------------------------------------------
-  //ajax  一个按钮，两个事件的功能，传文件
+  //ajax  一个按钮，两个事件的功能，传文件，说多了都是泪啊，前端太渣了，吃了不少苦
     <script type="text/javascript">
             function check() {
                 var file_value = document.getElementById("file").value;
