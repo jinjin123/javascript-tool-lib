@@ -119,3 +119,41 @@
     http://stackoverflow.com/questions/27736186/jquery-has-deprecated-synchronous-xmlhttprequest
     http://blog.csdn.net/willspace/article/details/49021481
    ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+   //ajax download
+   <script type="text/javascript">
+            function check() {
+                var remote = document.getElementById("remote").value;//都是id
+                var local = document.getElementById("local").value;
+                var ip = document.getElementById("IP").value;      
+                var formData = new FormData($( "#filedw" )[0]);  //表单ID
+                if(remote == "请选择远程文件路径")
+                {
+                        alert("请选择远程文件路径");
+                }else if(local == "请选择到本地路径"){
+                        alert("请选择到本地路径");
+                }else if(ip == "请选择主机")
+                {
+                        alert("请选择主机");
+                }else{
+                        $.ajax({
+                        url: '/file_dw' ,
+                        type: 'POST',
+                        data: formData,
+                        async: true,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        success:function (data,status) {
+                         if(data == "0"){
+                                alert("下载成功")
+                                }else{
+                                alert("主机没有录入信息")
+                                }
+                        },
+                        error: function (returndata) {  
+                                alert("上传失败");   
+                        }       
+                 });
+                }
+        } 
+    </script>
